@@ -1,0 +1,267 @@
+<!doctype html>
+//Dylan Romeo Wahlstrom
+//1211
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Got Ink?</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="css/themes/my-custom-theme.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+    <div data-role="page" id="home">
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+	    <img border="0" src="images/tiny.png" alt="Logo" style="float:right;display:inline"/>
+	    
+            <h1>Got Ink?</h1>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+	    
+		<div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home" data-theme="a" class="ui-btn-active ui-state-persist">Home</a></li>
+                    <li><a href="#add" data-icon="plus" data-theme="a">Add Client</a></li>
+                    <li><a href="#info" data-icon="info" data-theme="a">Information</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+        
+        
+        <div data-role="content">
+            
+            <div data-role="collapsible" data-collapsed="true" data-theme="a">
+                <h3>Browse By</h3>
+                <ul data-role="listview" data-filter="true">
+                <li>
+                    <a href="#error">
+                        Style
+                    </a>
+                </li>
+                <li>
+                    <a href="#error">
+                        First Name
+                    </a>
+                </li>
+                <li>
+                    <a href="#error">
+                        Last Name
+                    </a>
+                </li>
+                <li>
+                    <a href="#error">
+                        Email
+                    </a>
+                </li>
+                <li>
+                    <a href="#error">
+                        Date
+                    </a>
+                </li>
+            </ul>
+        </div>
+            </div>
+        <p><img src=images/calltoaction.png></p>
+            
+                
+        
+        
+            
+            
+        </div>
+        
+    </div>
+    <div data-role="page" id="add" data-add-back-btn="true" >
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+	    <img border="0" src="images/tiny.png" alt="Logo" style="float:right;display:inline"/>
+            <h1>Got Ink?</h1>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#home" data-icon="home" data-theme="a">Home</a></li>
+                    <li><a href="additem.html" data-icon="plus" data-theme="a" class="ui-btn-active ui-state-persist">Add Client</a></li>
+                    <li><a href="#info" data-icon="info" data-theme="a">Information</a></li>
+                    
+                </ul>
+	    </div>
+	    </div>
+            
+        </div>
+	
+	 <div data-role="content">
+            <form action="" method="post" id="addclient">
+		<div data-role="fieldcontain">
+		    <label for="fname">First Name:</label>
+		    <input type="text" name="fname" id="fname" class="required" />
+		</div>	
+		<div data-role="fieldcontain">    
+		    <label for="lname">Last Name:</label>
+		    <input type="text" name="lname" id="lname" class="required"/>
+		</div>
+		<div data-role="fieldcontain">    
+		    <label for="email">E-mail:</label>
+		    <input type="text" name="email" id="email" class="required email" />
+		</div>
+		<div data-role="fieldcontain">    
+		    <fieldset data-role="controlgroup">
+			<legend>Sex:</legend>
+			<input type="radio" value="Male" name="sexx" id="sexm" />
+			<label for="sexm">Male</label>
+			<input type="radio" value="Female" name="sexx" id="sexf" />
+			<label for="sexf">Female</label>
+		    </fieldset>
+		</div>
+		<div data-role="fieldcontain">    
+		    <label for="style">Tattoo Options:</label>
+		    <select name="style" id="style" class="required">
+			<option data-placeholder="true">Please Select One</option>
+			<optgroup label="Style"></optgroup>
+			    <option value="Old">Old School</option>
+			    <option value="New">New School</option>
+			    <option value="Sail">Sailor Jerry</option>
+			    <option value="Jap">Japanese</option>
+			    <option value="Por">Portrait</option>
+			</optgroup>
+		    </select>
+		</div>
+		<div data-role="fieldcontain">    
+		    <label for="url">Tattoo Example URL:</label>
+		    <input type="text" name="url" id="url" class="required url"/>
+		</div>
+		
+		<div data-role="fieldcontain">    
+		    <label for="paintolerance">Pain Tolerance:</label>
+		    <input type="range" name="paintolerance" id="paintolerance" value="5" min="0" max="10" />
+		</div>
+		<div data-role="fieldcontain">    
+		    <label for="comments">Comments:</label>
+		    <textarea></textarea>
+		</div>
+		<div>
+		    <input type="reset" value="Reset" data-theme="a" />
+		    <input type="submit" value="Submit" data-theme="b" />
+		</div>
+		
+		<a href="#tattooerrors" id="taterrorslink" data-rel="dialog" data-transition="pop">Open Errors</a>
+		
+	    </form>
+	    
+	 </div>
+    </div>
+        
+    </div>
+    
+    <div data-role="dialog" id="tattooerrors">
+	
+	<div data-role="header" data-position="fixed">
+	    <h1>Missing Felids</h1>
+	</div>
+	
+	<div data-role="content">
+	    <ul>
+		<li>m/li>
+		
+	    </ul>
+	</div>
+    </div>
+    
+     <div data-role="page" id="info" data-add-back-btn="true" >
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+	    <img border="0" src="images/tiny.png" alt="Logo" style="float:right;display:inline"/>
+            <h1>Got Ink?</h1>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home" data-theme="a">Home</a></li>
+                    <li><a href="additem.html" data-icon="plus" data-theme="a">Add Client</a></li>
+                    <li><a href="#info" data-icon="info" data-theme="a" class="ui-btn-active ui-state-persist">Information</a></li>
+                    
+                </ul>
+	    </div>
+            </div>
+        </div>
+        
+        <div data-role="content">
+            <ul data-role="listview" data-theme="e">
+                <li><a href="index.html">Gold App</a></li>
+                <li><a href="/Users/dylanwahlstrom/Desktop/MiU/Bronze/index.html">Bronze App</a></li>
+            </ul>
+        </div>
+        <div data-role="collapsible" data-collapsed="true" data-theme="c">
+                <h3>About</h3>
+                <ul data-role="listview">
+            <li>Creater: Dylan Wahlstrom</li>
+            <li>Tattoo Appointment Application</li>
+            <li>MiU</li>
+            </ul>
+            </div>
+        
+            
+            
+        </div>
+        
+        
+            
+        </div>
+        
+    </div>
+     
+    <div data-role="page" id="error" data-add-back-btn="true" >
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>Got Ink?</h1>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home" data-theme="a">Home</a></li>
+                    <li><a href="additem.html" data-icon="plus" data-theme="a">Add Client</a></li>
+                    <li><a href="#info" data-icon="info" data-theme="a">Information</a></li>
+                    
+                </ul>
+	    </div>
+            </div>
+        </div>
+        
+        <div data-role="content">
+            
+            <h3>You have navigated to a page that currently does not exist!</h3>
+            
+        </div>
+        
+        
+            
+        </div>
+        
+    </div>
+    
+
+	<!-- JavaScript under here -->
+        
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
